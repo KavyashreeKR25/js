@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENTS</title>
+</head>
+<body>
+    <center>
+        <h1>Focus and Blur</h1>
+    </center>
+    <hr>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name" onfocus="focusHandler()" onblur=" blurHandler()">
+    </form>
+
+    <script>
+        function focusHandler(){
+            document.getElementById("name").style.background = "orange";
+        }
+        function blurHandler(){
+            document.getElementById("name").style.background = "grey";
+        }
+
+    </script>
+</body>
+</html>

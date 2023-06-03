@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object inheritance</title>
+</head>
+<body>
+    <h3>inheritance chain using __proto__ keyword</h3>
+
+    <script>
+        let c1 = {
+            c1Title:"React",
+            c1Fee:23452
+        };
+
+        let c2 = {
+            c2Title:"Angular",
+            c2Fee:23234,
+            __proto__:c1
+        };
+
+        let c3 = {
+            c3Title:"NodeJs",
+            c3Fee:23535,
+            __proto__:c2
+        };
+
+        let bep = {
+            name:"be-practical",
+            __proto__:c3
+        };
+
+        document.write(`<h3> ${bep}</h3>`);
+        console.log('bep =',bep);
+        document.write(`<h3> ${bep.c1Title} </h3>`);
+        document.write(`<h3> ${bep.c1Fee} </h3>`);
+        document.write(`<h3> ${bep.c2Title} </h3>`);
+        document.write(`<h3> ${bep.c2Fee} </h3>`);
+        document.write(`<h3> ${bep.c3Title} </h3>`);
+        document.write(`<h3> ${bep.c3Fee} </h3>`);
+        document.write(`<h3> ${bep.name} </h3>`);
+        
+
+    </script>
+</body>
+</html>

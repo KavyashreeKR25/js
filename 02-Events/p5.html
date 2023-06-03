@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: rgb(174,0,15);
+            color: #fff;
+            padding: 12px;
+            width: 50%;
+            height: 500px;
+            overflow: auto;
+            font-size: 1.1em;
+            border-radius: 20px;
+        }
+        h4{
+            padding: 10px;
+            background-color: rgb(52,4,110);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>onmousewheel</h1>
+    </center>
+    <hr>
+    <h4 id="output"></h4>
+    <div id="text" onmousewheel="wheelHandler();" onscroll="wheelHandler()">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fuga!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem consequuntur natus unde excepturi porro eligendi, inventore cupiditate officiis asperiores recusandae, magni voluptates sit numquam doloribus obcaecati culpa quibusdam eos fugay</p>
+    </div>
+    <script>
+        function wheelHandler(){
+            let output = document.getElementById("output");
+            output.innerHTML = document.getElementById("text").scrollTop + "px";
+        }
+    </script>
+</body>
+</html>

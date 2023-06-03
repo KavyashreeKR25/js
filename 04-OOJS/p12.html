@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INHERITANCE</title>
+</head>
+<body>
+    <center>
+        <h1>Object based inheritance (inheritance chain)</h1>
+    </center>
+    <hr>
+    <script>
+        let c1 = {
+            "c1Title":"HTML",
+            "c1Fee":1000
+        };
+
+        let c2 = Object.create(c1,{
+            "c2Title":{value:"CSS"},
+            "c2Fee":{value:2000}
+        });
+
+        let c3 = Object.create(c2, {c3Title:{value:"JS"},c3Fee:{value:3000}});
+
+        let bePractical = Object.create(c3,{name:{value:"Trainer"}});
+
+        console.log(bePractical.name);
+        console.log(bePractical.c3Title);
+        console.log(bePractical.c3Fee);
+        console.log(bePractical.c2Title);
+        console.log(bePractical.c2Fee);
+        console.log(bePractical.c1Title);
+        console.log(bePractical.c1Fee);
+
+    </script>
+</body>
+</html>

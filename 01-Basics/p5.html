@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+    <style>
+        table, th, td{
+            background-color: lightgray;
+            border: 2px solid grey;
+            padding: 10px;
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Condition Statements..!</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>Simple if</li>
+        <li>If else</li>
+        <li>If else Lader</li>
+        <li>Switch case</li>
+    </ol>
+    <hr>
+
+    <table>
+        <tr>
+            <td><label for="">Enter First Number</label></td>
+            <td><input type="text" name="firstNumber" id="firstNumber" placeholder="First Number"></td>
+        </tr>
+        <tr>
+            <td><label for="">Enter Second Number</label></td>
+            <td><input type="text" name="secondNumber" id="secondNumber" placeholder="Second Number"></td>
+        </tr>
+        <tr>
+            <td><label for="">Enter Third Number</label></td>
+            <td><input type="text" name="thirdNumber" id="thirdNumber" placeholder="third Number"></td>
+        </tr>
+        <td><button type="button" onclick="testCondition()">RESULT</button></td>
+        <td><p id="result"></p></td>
+    </table>
+
+    <script>
+        function testCondition(){
+            let firstNumber = parseInt(document.getElementById(`firstNumber`).value);
+            let secondNumber= +document.getElementById(`secondNumber`).value;
+            let thirdNumber= +document.getElementById(`thirdNumber`).value;
+            console.log(typeof thirdNumber);
+
+
+
+            // if(firstNumber === secondNumber === thirdNumber){
+            //      document.getElementById("result").innerHTML="Numbers are equal..!";
+            //  }
+            if(firstNumber > secondNumber){
+                    if(firstNumber > thirdNumber){document.getElementById("result").innerHTML="First Numbers is big..!";}
+
+                    else{
+                    document.getElementById("result").innerHTML="Third Numbers is big..!";}
+
+             }
+             else if(firstNumber == secondNumber == thirdNumber ){
+                document.getElementById("result").innerHTML="All Numbers is equal..!";
+             }
+            else {
+                if(secondNumber > thirdNumber){document.getElementById("result").innerHTML="Second Numbers is big..!";}
+
+                else{
+                document.getElementById("result").innerHTML="Third Numbers is big..!";}
+             }
+
+
+            
+            // let message = firstNumber < secondNumber ? "condition is true..!" : "condition is not true..!"
+
+            // document.write(message);
+        }
+        // testCondition();
+    </script>
+</body>
+</html>

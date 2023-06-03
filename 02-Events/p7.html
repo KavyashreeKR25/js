@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <h1>Onchange</h1>
+   </center>
+   <hr>
+   <h3 id="output"></h3>
+   <label for="">Choose tech</label>
+   <select name="tech" id="tech" onchange="selHandler()">
+    <option value="null">Choose option</option>
+    <option value="html">html</option>
+    <option value="css">css</option>
+    <option value="js">js</option>
+    <option value="jquery">jquery</option></select>
+    
+    <script>
+       function selHandler(){
+        let select=document.getElementById("tech").value;
+
+        if(tech == "null"){
+            document.getElementById(`output`).innerHTML ="No value selected"
+        }
+        else{
+            document.getElementById(`output`).innerHTML =`you have selected ${tech}`;
+        }
+       } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+    <style>
+        div{
+            box-sizing: border-box;
+            padding: 20px;
+            margin: auto;
+            height: 45%;
+            width: 35%;
+            background-color: aquamarine;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1>For Loop</h1>
+    <input type="number" id="firstNumber">
+    <button onclick="ForLoop()">For Loop</button>
+</div>
+</body>
+<script>
+    
+    function ForLoop(){
+        let fNumber = +document.getElementById("firstNumber").value;
+        for( i=0; i <=fNumber; i++){
+            document.write(i,"<br><hr>");
+        }
+
+    }
+</script>
+</html>

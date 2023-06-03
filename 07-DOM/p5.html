@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+
+    <p class="test">This is a paragraph..!</p>
+    <h1 class="test">This is a paragraph..!</h1>
+
+    <script>
+        let matches = document.getElementsByClassName("test");
+        console.log(matches);
+
+        matches[0].style.fontWeight="bold";
+        matches[1].style.background="yellow";
+
+        for(var e in matches){
+            matches[e].style.background = "grey";
+            matches[e].style.color = "white";
+        }
+    </script>
+
+</body>
+</html>

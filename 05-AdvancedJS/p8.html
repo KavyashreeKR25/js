@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    <center>
+        <h1>Generator function</h1>
+    </center>
+
+    <hr>
+    <script>
+        function A(){
+            return 10+20;
+            return 20-10;
+        }
+        document.write(A(),"<br>");
+
+        function* users(){
+            //yield is kind of like return
+            //return x returns the value of x , but yield x returns a function ,
+
+            yield "Raju";
+            yield "Mahesh";
+            yield "Ranjitha";
+            yield "Savitha";
+            yield "Venkatesh";
+        }
+
+        console.log('users()',users());
+        console.log('users()',typeof users());
+
+        for (const iterator of users()) {
+            document.write(`<h3>${iterator}</h3>`);
+        }
+    </script>
+</body>
+</html>

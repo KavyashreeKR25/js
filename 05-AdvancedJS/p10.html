@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+</head>
+<body>
+    <center>
+        <h1>SET</h1>
+    </center>
+    <hr>
+
+    <script>
+        let emp = new Set();
+
+        emp.add("Raju");
+        emp.add("Mahesh");
+        emp.add("Suraj");
+        emp.add("Prakash");
+
+        console.log(`set = `,emp.entries());
+
+        emp.forEach(function(item){
+            document.write(`<h3>${item}</h3>`);
+        });
+
+        //has()
+        console.log("has('Raju')=",emp.has('Raju')); //true
+        console.log("has('Thanu')=",emp.has('Thanu')); //False
+
+        emp.delete("Raju");//delete set
+
+        console.log('after delete =',emp.entries());
+        console.log("has('Raju') = ",emp.has('Raju'));
+
+
+    </script>
+</body>
+</html>

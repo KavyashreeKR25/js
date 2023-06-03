@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>By creating instance of Object directly(using new keyword)</h1>
+    </center>
+    <hr>
+    <strong>SYNTAX:</strong>
+    <pre>
+        let objectName = new constructorMethod();
+    </pre>
+
+    <script>
+        document.write();
+
+        let empDetails = new Object();
+        console.log(typeof empDetails);
+
+        empDetails.firstName = "kavya";
+        empDetails.lastName = "shree";
+        empDetails.fullName = function(){
+            return this.firstName+ " "+this.lastName
+        };
+
+        document.write(empDetails.firstName+"<br>");
+        document.write(empDetails.lastName+"<br>");
+        document.write(empDetails.fullName()+"<br>");
+    </script>
+
+    <hr>
+
+    <center>
+        <h1>By using an object constructor (using new keyword)</h1>
+    </center>
+
+    <script>
+        function StudentInfo(firstName,lastName){
+            document.write(`<h3>First parameter value is:${firstName}</h3>`);
+            document.write(`<h3>Last parameter value is:${lastName}</h3>`);
+
+            let fn,ln;
+            fn=firstName;
+            ln=lastName;
+
+            document.write(`<h3>First variable value is : ${fn}</h3>`);
+            document.write(`<h3>Last variable value is : ${ln}</h3>`);
+
+            let fName,lName;  //internal property
+
+            this.fName=firstName;
+            this.lName=lastName;
+
+            document.write(`<h3>First variable value is : ${fName}</h3>`);
+            document.write(`<h3>Last variable value is : ${lName}</h3>`);
+            console.log(typeof(fName));
+
+
+        }
+        let stud = new StudentInfo("HTML","HTML-5");
+        console.log("STUD: ",typeof stud)
+        console.log("STUD: ",stud);
+
+        document.write(`<h3>First Variable value is : ${stud.fName}</h3>`);
+        document.write(`<h3>Second Variable value is : ${stud.lName}</h3>`);
+
+    </script>
+</body> 
+</html> 

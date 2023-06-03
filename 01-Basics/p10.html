@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>SCOPES</h1>
+    </center>
+    <br>
+    <script>
+        // let and const always have local (block) scope
+
+        let x = 15;
+        if(x > 12){
+            let a = 123
+            var b = 2345
+            document.write(`<h3>Local A = ${ a } </h3>`);
+            document.write(`<h3>Local B = ${ b } </h3>`);
+            document.write(`<h3>Local X = ${ x } </h3>`);
+        }
+
+        document.write("<hr>");
+
+        document.write(`<h3> Global X = ${ x } </h3>`);
+        document.write(`<h3> Global B = ${ b } </h3>`);
+        document.write(`<h3> Global A = ${ a } </h3>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCTOR</title>
+</head>
+<body>
+    <center>
+        <h1>DATE CONSTRUCTOR</h1>
+    </center>
+    <hr>
+
+    <script>
+        let date1 =new Date();
+        document.write(`<h3>SYSTEM DATE & TAME :${date1}</h3></hr>`)
+
+        let date2 =new Date(2001,0,31,12,30,15);
+        document.write(`<h3>SYSTEM DATE & TAME :${date2}</h3></hr>`)
+
+        let date3 =new Date("31 January 2011");
+        document.write(`<h3>SYSTEM DATE & TAME :${date3}</h3></hr>`)
+    </script>
+
+    <h1>Digital Clock</h1>
+
+    <h2 id="clock"></h2>
+        <script>
+            function digitalClock(){
+                let clock = new Date();
+                document.querySelector("#clock").innerHTML = clock.getHours() + ":"+clock.getMinutes() +":" + clock.getSeconds();
+            }
+            setInterval("digitalClock()",1000);
+        </script>
+
+
+
+</body>
+</html>

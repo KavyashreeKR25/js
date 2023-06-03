@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <center>
+        <h1>String Literal..!</h1>
+    </center>
+
+    <script>
+        let str = "This is String..!";
+        document.write(typeof(str) +"<br>");
+        document.write(str + "<br>");
+    </script>
+
+    <hr>
+
+    <center>
+        <h1>String New Instance..!</h1>
+    </center>
+
+    <script>
+        let dd = new String();
+        dd = "111111111111";
+        document.write(dd + "<br>");
+        document.write(typeof(dd) + "<br>");
+    </script>
+
+    <hr>
+    <center>
+        <h1>By using an string object constructor(using new keyword)</h1>
+    </center>
+
+    <script>
+        let str1 = new String("ABCD");
+        document.write(str1 + "<br>");
+
+        for(let i=0; i<str1.length;i++){
+            document.write(str1[i] + "<br>");
+        }
+        document.write(typeof(str1));
+    </script>
+
+    <script>
+        document.write("<hr>");
+        document.write("<h1>String Methods..!</h1>");
+        document.write("<br>");
+
+        document.writeln("<h3>String charAt() Method..!</h3>");
+        var s1 = "Javascript";
+        document.write(s1.charAt(6));
+
+        document.write("<hr>");
+        document.writeln("<h3>String concat() Method..!</h3>");
+        var s2 = "Example";
+        var s3 = s1.concat(s2);
+        document.write(s3);
+
+        var s4 = s1 + s2;
+        document.write(s4 + "<br>");
+
+        document.write("<hr>");
+        document.writeln("<h3>String indexOf() method..!</h3>");
+        var s5 = s1.indexOf("i");
+        document.write(s5);
+
+        document.write("<hr>");
+        document.writeln("<h3>String lastIndexOf() method..!</h3>");
+        var ss = "bangaluru";
+        var sss = ss.lastIndexOf("u");
+        document.write(sss);
+
+        document.write("<hr>");
+        document.writeln("<h3>String lowerCase() Method..!</h3>");
+        var s6 = "JAVASCRIPT TOLOWERCASE EXAMPLE";
+        var s7 = s6.toLowerCase();
+        document.write(s7);
+    
+        document.write("<hr>");
+        document.writeln("<h3>String upperCase() Method..!</h3>");
+        var s8 = "javascript touppercase example";
+        var s9 = s8.toUpperCase();
+        document.write(s9);
+
+        document.write("<hr>");
+        document.writeln("<h3>String trim() Method..!</h3>");
+        var s10 = "   Java  Script                  Trim   ";
+        var s11 = s10.trim();
+        document.write(s11);
+    </script>
+</body>
+</html>
